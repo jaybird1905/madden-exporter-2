@@ -44,7 +44,7 @@ app.post('/:platform/:leagueId/leagueteams', (req, res) => {
   const {platform, leagueId} = req.params;
   const dataRef = ref.child(`data/${platform}/${leagueId}/leagueteams`);
   const {body: {leagueTeamInfoList}} = req;
-
+  console.log(leagueTeamInfoList);
   dataRef.set({
     leagueTeamInfoList
   });
